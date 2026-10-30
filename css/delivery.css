@@ -1,0 +1,26 @@
+/* Bloco e banner de Delivery */
+.delivery-wrap{max-width:1100px;margin:28px auto 0;}
+.delivery-hd{background:linear-gradient(135deg,#1a1200,#0f1e35);border:1.5px solid #f59e0b;border-radius:14px;padding:16px 22px;display:flex;align-items:center;gap:12px;cursor:pointer;user-select:none;margin-bottom:2px;}
+.delivery-hd:hover{filter:brightness(1.08);}
+.delivery-hd-chev{margin-left:auto;font-size:11px;color:rgba(255,255,255,.4);transition:transform .2s;}
+.delivery-block.collapsed .delivery-body{display:none;}
+.delivery-block.collapsed .delivery-hd-chev{transform:rotate(-90deg);}
+.delivery-body{background:var(--panel);border:1.5px solid #f59e0b;border-top:none;border-radius:0 0 14px 14px;padding:18px;}
+.delivery-alert{background:rgba(245,158,11,.1);border:1.5px solid rgba(245,158,11,.4);border-radius:10px;padding:12px 16px;margin-bottom:16px;font-size:13px;font-weight:600;color:#fbbf24;}
+.delivery-rule{font-size:12px;color:var(--dim);margin-bottom:20px;line-height:1.6;}
+.delivery-ciclo{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-bottom:20px;}
+.delivery-fase{background:rgba(255,255,255,.03);border:1px solid var(--br);border-radius:10px;padding:12px;}
+.delivery-fase-num{font-size:10px;font-weight:700;color:#f59e0b;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;}
+.delivery-fase-desc{font-size:12px;color:var(--tx);margin-bottom:6px;}
+.delivery-fase-status{font-size:10px;font-family:'JetBrains Mono',monospace;color:var(--dim);}
+.delivery-table{width:100%;border-collapse:collapse;}
+.delivery-table th{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--dim);text-align:left;padding:6px 10px;border-bottom:1px solid var(--br);}
+.delivery-table td{font-size:11px;padding:8px 10px;border-bottom:1px solid rgba(255,255,255,.04);font-family:'JetBrains Mono',monospace;}
+.delivery-table tr:last-child td{border-bottom:none;}
+.td-onde-delivery{color:#f59e0b;font-weight:700;}
+.td-onde-vazio{color:var(--dim);}
+.delivery-banner{display:flex;align-items:center;gap:10px;max-width:1100px;margin:0 auto 20px;padding:10px 18px;background:rgba(245,158,11,.06);border:1px solid rgba(245,158,11,.2);border-radius:10px;cursor:pointer;transition:all .2s;flex-wrap:wrap;}
+.delivery-banner:hover{background:rgba(245,158,11,.12);border-color:rgba(245,158,11,.4);}
+.delivery-banner-icon{font-size:15px;flex-shrink:0;}
+.delivery-banner-text{font-size:12px;color:var(--dim);flex:1;}
+.delivery-banner-link{font-size:11px;font-weight:700;color:#f59e0b;white-space:nowrap;text-decoration:underline;text-underline-offset:3px;}

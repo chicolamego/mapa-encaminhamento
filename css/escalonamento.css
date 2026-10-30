@@ -1,0 +1,15 @@
+/* Escalonamento Campo */
+.escal-wrap{max-width:1400px;margin:0 auto;}
+.escal-filial{margin-bottom:28px;}
+.escal-filial-title{font-size:13px;font-weight:700;color:#ff7f3f;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid rgba(255,127,63,.2);}
+.escal-grupos{display:grid;grid-template-columns:repeat(auto-fill,minmax(480px,1fr));gap:14px;}
+.escal-grupo{background:var(--panel);border:1px solid var(--br);border-radius:12px;overflow:hidden;}
+.escal-grupo-title{font-size:11px;font-weight:700;color:#ffaa7f;background:rgba(255,127,63,.08);padding:8px 14px;border-bottom:1px solid rgba(255,127,63,.12);}
+.escal-table{width:100%;border-collapse:collapse;table-layout:fixed;}
+.escal-table th{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--dim);text-align:left;padding:6px 12px;border-bottom:1px solid rgba(255,255,255,.05);}
+.escal-table th:nth-child(1){width:90px;}.escal-table th:nth-child(2){width:120px;}.escal-table th:nth-child(3){width:170px;}
+.escal-table td{font-size:12px;padding:8px 12px;border-bottom:1px solid rgba(255,255,255,.03);vertical-align:top;}.escal-table td:first-child{white-space:nowrap;}
+.escal-table tr:last-child td{border-bottom:none;}
+.escal-nivel{font-size:10px;font-weight:700;font-family:JetBrains Mono,monospace;background:rgba(255,127,63,.15);color:#ffaa7f;padding:1px 6px;border-radius:4px;white-space:nowrap;display:inline-block;}
+.escal-tel{color:#22c97a;font-family:JetBrains Mono,monospace;}
+.escal-obs{font-size:10px;color:var(--dim);font-style:italic;margin-top:2px;}

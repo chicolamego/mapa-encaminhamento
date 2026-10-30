@@ -1,0 +1,15 @@
+/* Guia Rápido (Intelix e scripts) */
+.guia-wrap{max-width:900px;margin:0 auto;}
+.guia-section{margin-bottom:32px;}
+.guia-section-title{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#0dcfb8;margin-bottom:16px;font-weight:700;}
+.intelix-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:8px;}
+.intelix-card{background:rgba(124,92,252,.07);border:1.5px solid rgba(124,92,252,.2);border-radius:12px;padding:14px 16px;}
+.intelix-card-titulo{font-size:11px;font-weight:700;color:#b39dfc;margin-bottom:6px;}
+.intelix-cmd{font-size:22px;font-weight:700;font-family:'JetBrains Mono',monospace;color:#fff;margin:4px 0;letter-spacing:2px;}
+.intelix-desc{font-size:11px;color:var(--dim);line-height:1.5;}
+.script-steps{display:flex;flex-direction:column;gap:12px;}
+.script-step{display:flex;gap:14px;align-items:flex-start;background:var(--panel);border:1px solid var(--br);border-radius:10px;padding:14px 16px;}
+.script-num{background:#7c5cfc;color:#fff;font-size:12px;font-weight:700;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.script-titulo{font-size:12px;font-weight:700;color:var(--tx);margin-bottom:4px;}
+.script-texto{font-size:12px;color:var(--dim);line-height:1.6;font-style:italic;}
+@media(max-width:700px){.intelix-grid{grid-template-columns:1fr;}}

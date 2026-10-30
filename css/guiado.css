@@ -1,0 +1,12 @@
+/* Modo Guiado (wizard) */
+.wcard{background:var(--panel);border:1.5px solid #7c5cfc;border-radius:16px;padding:24px;box-shadow:0 0 24px rgba(124,92,252,.2);max-width:600px;margin:0 auto;}
+.wsl{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#7c5cfc;margin-bottom:8px;}
+.wq{font-size:18px;font-weight:700;margin-bottom:20px;}
+.wopts{display:flex;flex-direction:column;gap:8px;}
+.wo{background:rgba(124,92,252,.07);border:1.5px solid rgba(124,92,252,.25);border-radius:10px;padding:12px 16px;cursor:pointer;font-size:13px;transition:all .2s;text-align:left;color:var(--tx);font-family:'Sora',sans-serif;width:100%;}
+.wo:hover{background:rgba(124,92,252,.18);border-color:#7c5cfc;}
+.wres{background:rgba(34,201,122,.08);border:1.5px solid rgba(34,201,122,.3);border-radius:12px;padding:18px 20px;margin-top:16px;}
+.wrl{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#22c97a;margin-bottom:6px;}
+.wrt{font-size:16px;font-weight:700;color:#22c97a;}
+.wbk{margin-top:10px;padding:8px 16px;border-radius:8px;border:1px solid var(--br);background:transparent;color:var(--dim);font-family:'Sora',sans-serif;font-size:12px;cursor:pointer;}
+.wrst{margin-top:6px;padding:8px 16px;border-radius:8px;border:1px solid #7c5cfc;background:rgba(124,92,252,.1);color:#b39dfc;font-family:'Sora',sans-serif;font-size:12px;cursor:pointer;}

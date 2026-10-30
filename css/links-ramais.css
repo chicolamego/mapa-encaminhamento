@@ -1,0 +1,12 @@
+/* Links úteis e Ramais */
+.links-wrap{max-width:900px;margin:0 auto;}
+.links-wrap.ramais-layout{max-width:1200px;}
+@media(max-width:800px){.ramais-two-col{grid-template-columns:1fr!important;}}
+.lg{margin-bottom:28px;}
+.lgt{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#f59e0b;margin-bottom:12px;font-weight:600;}
+.lgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px;}
+.lcard{background:var(--panel);border:1px solid var(--br);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;text-decoration:none;transition:border-color .2s,box-shadow .2s;}
+.lcard:hover{border-color:#f59e0b;box-shadow:0 0 12px rgba(245,158,11,.15);}
+.llbl{font-size:13px;font-weight:600;color:var(--tx);}
+.lurl{font-size:10px;font-family:'JetBrains Mono',monospace;color:#0dcfb8;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.lobs{font-size:11px;color:var(--dim);}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Mapa de Encaminhamento — Mundivox</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/navegacao.css">
+<link rel="stylesheet" href="css/consulta.css">
+<link rel="stylesheet" href="css/guiado.css">
+<link rel="stylesheet" href="css/links-ramais.css">
+<link rel="stylesheet" href="css/delivery.css">
+<link rel="stylesheet" href="css/escalonamento.css">
+<link rel="stylesheet" href="css/guia-rapido.css">
+<link rel="stylesheet" href="css/processos.css">
+</head>
+<body>
+<header>
+  <div class="logo">Mundivox Communications</div>
+  <h1>Mapa de <span>Encaminhamento</span></h1>
+  <p class="sub">Central de Relacionamento — Guia de atendimento</p>
+</header>
+<div class="nav-tabs">
+  <button class="ntab on" id="btn-c" onclick="setView('c')">🔍 Modo Consulta</button>
+  <button class="ntab wiz" id="btn-w" onclick="setView('w')">🎓 Modo Guiado</button>
+  <button class="ntab lnk" id="btn-l" onclick="setView('l')">🔗 Links Úteis</button>
+  <button class="ntab ram" id="btn-r" onclick="setView('r')">📞 Ramais</button>
+  <button class="ntab esc" id="btn-e" onclick="setView('e')">📡 Escalonamento Campo</button>
+  <button class="ntab gui" id="btn-g" onclick="setView('g')">📋 Guia Rápido</button>
+  <button class="ntab pro" id="btn-o" onclick="setView('o')">⚙️ Processos</button>
+</div>
+<div class="sw" id="sw">
+  <span class="sic">🔍</span>
+  <input class="si" id="si" placeholder="Pesquisar: VPN, lentidão, S3, cancelamento..." oninput="doSearch(this.value)"/>
+  <span class="scl" id="scl" onclick="clrSearch()">✕</span>
+</div>
+<div class="view on" id="view-c">
+  <div class="delivery-banner" onclick="document.getElementById('delivery-block').classList.remove('collapsed');document.getElementById('delivery-block').scrollIntoView({behavior:'smooth'})">
+    <span class="delivery-banner-icon">⚠️</span>
+    <span class="delivery-banner-text">Antes de abrir qualquer OC — verificou se o cliente está em Delivery?</span>
+    <span class="delivery-banner-link">Como identificar →</span>
+  </div>
+  <div class="branches" id="branches"></div>
+  <div class="rs"><div class="rtt">Tradução de Relatos — O que o cliente quer dizer?</div><div class="rg" id="rg"></div></div>
+  <div class="delivery-wrap" id="delivery-wrap"></div>
+</div>
+<div class="view" id="view-w">
+  <div class="wcard">
+    <div class="wsl" id="wsl"></div>
+    <div class="wq" id="wq"></div>
+    <div class="wopts" id="wopts"></div>
+    <div id="wres" style="display:none"><div class="wres"><div class="wrl">✅ Encaminhamento</div><div class="wrt" id="wrt"></div></div><button class="wrst" onclick="wStart()">↩ Recomeçar</button></div>
+    <div id="wnav" style="display:none;margin-top:8px"><button class="wbk" onclick="wBack()">← Voltar</button></div>
+  </div>
+  <div style="max-width:600px;margin:16px auto 0">
+    <button onclick="toggleColabTree()" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(124,92,252,.3);background:rgba(124,92,252,.06);color:#b39dfc;font-family:'Sora',sans-serif;font-size:12px;cursor:pointer;transition:all .2s" onmouseover="this.style.background='rgba(124,92,252,.12)'" onmouseout="this.style.background='rgba(124,92,252,.06)'">
+      🗺️ Ver mapa completo de todos os caminhos
+    </button>
+    <div id="colab-tree" style="display:none;margin-top:10px;background:rgba(124,92,252,.05);border:1px solid rgba(124,92,252,.2);border-radius:10px;padding:16px"></div>
+  </div>
+</div>
+<div class="view" id="view-l">
+  <div class="links-wrap" id="links-wrap"></div>
+</div>
+<div class="view" id="view-e">
+  <div class="sw"><span class="sic">🔍</span><input class="si" id="escal-search" placeholder="Pesquisar nome, função, filial..." oninput="filterEscal(this.value)"/><span class="scl" id="escal-scl" onclick="clearEscalSearch()" style="display:none">✕</span></div>
+  <div class="escal-wrap" id="escal-wrap"></div>
+</div>
+<div class="view" id="view-r">
+  <div class="sw"><span class="sic">🔍</span><input class="si" id="ramais-search" placeholder="Pesquisar nome, cargo, ramal, e-mail..." oninput="filterRamais(this.value)"/><span class="scl" id="ramais-scl" onclick="clearRamaisSearch()" style="display:none">✕</span></div>
+  <div class="links-wrap" style="max-width:1200px" id="ramais-wrap"></div>
+</div>
+<div class="view" id="view-g">
+  <div class="guia-wrap" id="guia-wrap"></div>
+</div>
+<div class="view" id="view-o">
+  <div class="processos-wrap" id="processos-wrap"></div>
+</div>
+<script src="js/data/setores.js"></script>
+<script src="js/data/adm.js"></script>
+<script src="js/data/relatos.js"></script>
+<script src="js/data/wizard.js"></script>
+<script src="js/data/links.js"></script>
+<script src="js/data/ramais.js"></script>
+<script src="js/data/delivery.js"></script>
+<script src="js/data/escalamento.js"></script>
+<script src="js/data/guia.js"></script>
+<script src="js/data/processos.js"></script>
+<script src="js/modules/consulta.js"></script>
+<script src="js/modules/delivery.js"></script>
+<script src="js/modules/links.js"></script>
+<script src="js/modules/ramais.js"></script>
+<script src="js/modules/busca.js"></script>
+<script src="js/modules/navegacao.js"></script>
+<script src="js/modules/guiado.js"></script>
+<script src="js/modules/escalonamento.js"></script>
+<script src="js/modules/guia-rapido.js"></script>
+<script src="js/modules/processos.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

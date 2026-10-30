@@ -1,0 +1,26 @@
+/* Processos e clientes especiais */
+.processos-wrap{max-width:900px;margin:0 auto;}
+.proc-categoria{background:var(--panel);border:1px solid var(--br);border-radius:14px;margin-bottom:14px;overflow:hidden;}
+.proc-cat-hd{padding:14px 18px;display:flex;align-items:center;gap:10px;cursor:pointer;user-select:none;}
+.proc-cat-hd:hover{filter:brightness(1.08);}
+.proc-cat-title{font-size:15px;font-weight:700;flex:1;}
+.proc-cat-chev{font-size:11px;color:var(--dim);transition:transform .2s;}
+.proc-categoria.open .proc-cat-chev{transform:rotate(180deg);}
+.proc-cat-body{display:none;padding:0 18px 18px;}
+.proc-categoria.open .proc-cat-body{display:block;}
+.proc-descricao{font-size:12px;color:var(--dim);margin-bottom:16px;line-height:1.6;}
+.proc-step{display:flex;gap:12px;margin-bottom:12px;align-items:flex-start;}
+.proc-num{background:#7c5cfc;color:#fff;font-size:11px;font-weight:700;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.proc-step-titulo{font-size:12px;font-weight:700;margin-bottom:3px;}
+.proc-step-texto{font-size:12px;color:var(--dim);line-height:1.6;font-style:italic;}
+.cliente-esp-card{border-radius:12px;overflow:hidden;margin-bottom:12px;border:1.5px solid;}
+.cliente-esp-hd{padding:10px 14px;display:flex;align-items:center;gap:10px;}
+.cliente-esp-nome{font-size:14px;font-weight:700;}
+.cliente-esp-alerta{font-size:11px;opacity:.8;}
+.cliente-esp-body{background:rgba(0,0,0,.2);padding:12px 14px;display:flex;flex-direction:column;gap:10px;}
+.cliente-esp-regra{background:rgba(255,255,255,.04);border-radius:8px;padding:10px 12px;}
+.cliente-esp-regra-titulo{font-size:11px;font-weight:700;margin-bottom:6px;}
+.cliente-esp-lista{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px;}
+.cliente-esp-lista li{font-size:11px;color:var(--dim);padding-left:14px;position:relative;line-height:1.5;}
+.cliente-esp-lista li::before{content:"•";position:absolute;left:0;}
+.pendente-badge{font-size:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:20px;padding:2px 10px;color:var(--dim);margin-left:8px;}
